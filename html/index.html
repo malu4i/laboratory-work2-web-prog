@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Лабораторна 2</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <div class="images">
+      <h2>Зображення з абсолютним посиланням</h2>
+      <!-- Абсолютне посилання (починається з https:// ...) -->
+      <img
+        src="https://tse4.mm.bing.net/th?id=OIP.zj5fcxY3ONutS3dL8AHA9QHaHr&pid=Api"
+        alt="Логотип ХНЕУ ім. С. Кузнеця"
+        width="150"
+      />
+
+      <br /><br />
+
+      <h2>Зображення з відносним посиланням</h2>
+      <!-- Відносне посилання (папка images у тому ж каталозі, що й index.html) -->
+      <img src="/images/hneu.jpeg" alt="Зображення логотипу ХНЕУ" width="150" />
+    </div>
+    <div class="rozklad">
+      <table>
+        <caption>
+          Розклад на групу 6.04.122.010.21.4
+        </caption>
+        <tr>
+          <th>№ пари<br />Час</th>
+          <th>Понеділок<br />24 березня 2025</th>
+          <th>Вівторок<br />25 березня 2025</th>
+          <th>Середа<br />26 березня 2025</th>
+          <th>Четвер<br />27 березня 2025</th>
+          <th>Пʼятниця<br />28 березня 2025</th>
+        </tr>
+
+        <tr>
+          <td class="time-col">1 пара<br />08:30–09:55</td>
+          <!-- Понеділок (1 і 2 пара порожні) -->
+          <td rowspan="2"></td>
+          <!-- Вівторок (усі 6 пар порожні) -->
+          <td rowspan="6"></td>
+          <!-- Середа (1 пара порожня, але вона НЕ суміжна з 6 парою, тож окремо) -->
+          <td></td>
+          <!-- Четвер (1 і 2 пара порожні) -->
+          <td rowspan="2"></td>
+          <!-- Пʼятниця (1 і 2 пара порожні) -->
+          <td rowspan="2"></td>
+        </tr>
+
+        <!-- 2 пара -->
+        <tr>
+          <td class="time-col">2 пара<br />10:05–11:30</td>
+          <td>
+            Системи штучного інтелекту (лаб.зан.)<br />
+            📍 дистанційне-108 (корп. Дист/нав)<br />
+            👤 Заданий В.М.
+          </td>
+        </tr>
+
+        <!-- 3 пара -->
+        <tr>
+          <td class="time-col">3 пара<br />11:40–13:05</td>
+          <td>
+            Веб-програмування (лекція)<br />
+            📍 дистанційне-18 (корп. Дист/нав)<br />
+            👤 Бондаренко Д.О.
+          </td>
+          <td>
+            Системи штучного інтелекту (лекція)<br />
+            📍 дистанційне-136 (корп. Дист/нав)<br />
+            👤 Заданий В.М.
+          </td>
+          <td>
+            Системи штучного інтелекту (лаб.зан.)<br />
+            📍 дистанційне-19 (корп. Дист/нав)<br />
+            👤 Заданий В.М.
+          </td>
+          <td>
+            Системи штучного інтелекту (лаб.зан.)<br />
+            📍 дистанційне-127 (корп. Дист/нав)<br />
+            👤 Заданий В.М.
+          </td>
+        </tr>
+
+        <tr>
+          <td class="time-col">4 пара<br />13:15–14:40</td>
+          <td rowspan="3"></td>
+          <td>
+            Системи штучного інтелекту (лаб.зан.)<br />
+            📍 дистанційне-136 (корп. Дист/нав)<br />
+            👤 Заданий В.М.
+          </td>
+          <td>
+            Системи штучного інтелекту (лаб.зан.)<br />
+            📍 дистанційне-136 (корп. Дист/нав)<br />
+            👤 Заданий В.М.
+          </td>
+          <td rowspan="3"></td>
+        </tr>
+
+        <tr>
+          <td class="time-col">5 пара<br />14:50–16:15</td>
+          <td>
+            Системи штучного інтелекту (лаб.зан.)<br />
+            📍 дистанційне-127 (корп. Дист/нав)<br />
+            👤 Заданий В.М.
+          </td>
+          <td rowspan="2"></td>
+        </tr>
+
+        <tr>
+          <td class="time-col">6 пара<br />16:25–17:50</td>
+          <td></td>
+        </tr>
+      </table>
+    </div>
+
+    <form id="registerForm">
+      <div class="form-group">
+        <label for="login">Логін:</label>
+        <input
+          type="text"
+          id="login"
+          name="login"
+          placeholder="Ваш логін"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="pass">Пароль:</label>
+        <input type="password" id="pass" name="pass" required />
+      </div>
+
+      <div class="form-group">
+        <label for="day">Дата народж.:</label>
+        <input
+          type="text"
+          id="day"
+          name="day"
+          placeholder="День"
+          style="width: 60px"
+        />
+
+        <select name="month" id="month" required>
+          <option value="">(Місяць)</option>
+          <option value="1">Січень</option>
+          <option value="2">Лютий</option>
+          <option value="3">Березень</option>
+          <option value="4">Квітень</option>
+          <option value="5">Травень</option>
+          <option value="6">Червень</option>
+          <option value="7">Липень</option>
+          <option value="8">Серпень</option>
+          <option value="9">Вересень</option>
+          <option value="10">Жовтень</option>
+          <option value="11">Листопад</option>
+          <option value="12">Грудень</option>
+        </select>
+
+        <select name="year" id="year" required>
+          <option value="">(Рік)</option>
+          <!-- Можна додати потрібні роки -->
+          <option value="2000">2000</option>
+          <option value="2001">2001</option>
+          <option value="2002">2002</option>
+          <option value="2003">2003</option>
+        </select>
+      </div>
+
+      <!-- Вибір статі (radio) -->
+      <div class="form-group">
+        <label>Стать:</label>
+        <div class="radio-group">
+          <input
+            type="radio"
+            id="male"
+            name="gender"
+            value="Чоловіча"
+            required
+          />
+          <label for="male">Чоловіча</label>
+        </div>
+        <div class="radio-group">
+          <input type="radio" id="female" name="gender" value="Жіноча" />
+          <label for="female">Жіноча</label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Іноземні мови:</label>
+        <div class="checkbox-group">
+          <input
+            type="checkbox"
+            id="eng"
+            name="languages[]"
+            value="англійська"
+          />
+          <label for="eng">Англійська</label>
+        </div>
+        <div class="checkbox-group">
+          <input
+            type="checkbox"
+            id="fr"
+            name="languages[]"
+            value="французька"
+          />
+          <label for="fr">Французька</label>
+        </div>
+        <div class="checkbox-group">
+          <input type="checkbox" id="de" name="languages[]" value="німецька" />
+          <label for="de">Німецька</label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="message">Повідомлення:</label><br />
+        <textarea
+          id="message"
+          name="message"
+          rows="4"
+          cols="50"
+          placeholder="Ваше повідомлення (до 300 символів)"
+        ></textarea>
+      </div>
+
+      <div class="form-group">
+        <input type="checkbox" id="remember" name="remember" />
+        <label for="remember">Запам’ятати мене</label>
+      </div>
+
+      <div class="form-group">
+        <button type="submit" class="btn">Зареєструватись</button>
+        <button type="reset" class="btn">Очистити</button>
+      </div>
+    </form>
+    <script src="/scripts/script.js"></script>
+  </body>
+</html>
